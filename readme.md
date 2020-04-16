@@ -3,3 +3,4 @@
 - code .
 - press f1 -> 'Python: Select Interpretor' -> 'env:venv'
 - Press debug or python manage.py runserver
+- /sgd/ml/upload
