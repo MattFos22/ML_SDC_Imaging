@@ -34,9 +34,9 @@ def simple_upload(request):
         default_storage.delete(imageLocation)
         default_storage.save(imageLocation, ContentFile(image_data.read()))
 
-        classifiedImageName = handle_uploaded_file(image_data)
+        # classifiedImageName = handle_uploaded_file(image_data)
         return render(request, 'sgd/ml/upload.html', {
-            'classification': classifiedImageName
+            'predicate': classifiedImageName
         })
     return render(request, 'sgd/ml/upload.html')
 

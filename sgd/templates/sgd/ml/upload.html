@@ -1,15 +1,13 @@
 {% load static %}
 
 {% block content %}
-{% if classification %}
-<img src="{% static '/subject.jpg' %}" height="420">
-{% endif %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     <input type="file" name="myfile">
     <button type="submit">Upload</button>
   </form>
-  {% if classification %}
-  <span class="message">{{ classification }}</span>
-  {% endif %}
+{% if predicate %}
+  <img src="{% static '/subject.jpg' %}" height="420">
+  <span class="message">{{ predicate }}</span>
+{% endif %}
 {% endblock %}
