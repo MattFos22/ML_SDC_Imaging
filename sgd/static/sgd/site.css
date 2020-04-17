@@ -1,4 +1,5 @@
-.message {
+.probabilities {
     font-weight: 600;
-    color: blue;
+    color: black;
+    font-size: 1.5em;
 }
