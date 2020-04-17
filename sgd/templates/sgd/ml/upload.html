@@ -1,5 +1,5 @@
 {% load static %}
-
+<link rel="stylesheet" type="text/css" href="{% static 'sgd/site.css' %}" />
 {% block content %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
@@ -8,6 +8,11 @@
   </form>
 {% if predicate %}
   <img src="{% static '/subject.jpg' %}" height="420">
-  <span class="message">{{ predicate }}</span>
+  <div class="message">{{ predicate }}</div>
+  {% for probability in probabilities %}
+    <div class="probabilities">
+      <p>{{ probability }}</p>
+    </div>
+  {% endfor %}
 {% endif %}
 {% endblock %}
