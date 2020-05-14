@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'sgd/site.css' %}" />
+{% block content %}
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <textarea id="w3mission" class="reviewtext" rows="4" cols="50"  placeholder="Type a positive or negative review of a movie..." ></textarea>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+  </form>
+{% endblock %}
