@@ -3,6 +3,7 @@
 *.pot
 *.pyc
 *.DS_Store
+*.pkl
 __pycache__
 db.sqlite3
 media
