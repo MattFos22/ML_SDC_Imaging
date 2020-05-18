@@ -6,9 +6,9 @@
     <input type="file" name="myfile">
     <button type="submit">Upload</button>
   </form>
-{% if predicate %}
+{% if raw %}
   <img src="{% static '/subject.jpg' %}" height="420">
-  <div class="message">{{ predicate }}</div>
+  <div class="message">{{ raw }}</div>
   {% for probability in probabilities %}
     <div class="probabilities">
       <p>{{ probability }}</p>

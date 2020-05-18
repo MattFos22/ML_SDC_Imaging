@@ -3,9 +3,13 @@
 {% block content %}
   <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
-    <textarea id="w3mission" class="reviewtext" rows="4" cols="50"  placeholder="Type a positive or negative review of a movie..." ></textarea>
+    <textarea name="reviewtext" class="reviewtext" rows="4" cols="50"  placeholder="Type a positive or negative review of a movie..." ></textarea>
     <div>
         <button type="submit">Submit</button>
     </div>
   </form>
+  {% if raw %}
+    <div class="message">{{ review }}</span>
+    <div class="message">{{ raw }}</span>
+  {% endif %}
 {% endblock %}

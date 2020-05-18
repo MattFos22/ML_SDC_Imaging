@@ -6,11 +6,12 @@ from fastai.vision import (
     models,
 )
 from sgd.repos.simple_upload import save
+import re
 
 def handle_uploaded_file(image):
     imageLocation = save(image)
     image = open_image(imageLocation)
-    path = 'sgd/static'
+    path = 'sgd/static/trained/comp-vision'
     learn = learner.load_learner(path)
     predictions = dict()
     predictions['raw']= learn.predict(image)
